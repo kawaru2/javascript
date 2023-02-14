@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+            font: normal 20pt arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let nome = prompt(`Qual é o seu nome?`);
+        // document.write = escrever no documento (HTML)
+        document.write(`Olá, <strong>${nome}</strong>! Seu nome tem ${nome.length} letras.<br>`);
+        // writeln serve para escrever em outra linha, parecido com o <br>.
+        // Podemos usar tags também!
+        document.write(`Seu nome em maiúsculas é: ${nome.toUpperCase()}.<br>`);
+        document.write(`Seu nome em minúsculas é: ${nome.toLowerCase()}.<br>`);
+        // Para formatarmos os números de acordo com suas casas, precisamos colocar o .toFixed().
+        // Já o replace, utilizamos para trocar uma letra ou número por outra letra ou número, nesse caso, estamos trocando o ponto pela virgúla.
+        let n1 = 1545.5;
+        document.write(`${n1.toFixed(2).replace(`.`,`,`)}<br>`)
+        // Formatação para os números ficarem em valores monetários.
+        document.write(`${n1.toLocaleString(`pt-BR`, {style: `currency`, currency: `BRL`})}<br>`);
+        document.write(`${n1.toLocaleString(`pt-BR`, {style: `currency`, currency: `USD`})}<br>`);
+        document.write(`${n1.toLocaleString(`pt-BR`, {style: `currency`, currency: `EUR`})}<br>`);
+    </script>
+</body>
+</html>

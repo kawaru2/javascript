@@ -24,7 +24,9 @@
         let n1 = Number(prompt('Digite um número: ')); // O 'prompt' sempre retorna como uma string, para corrigir esse bug, basta transforma de string para um número.
         let n2 = Number(prompt('Digite outro número: ')); // Olhe antes do prompt a solução desse esercício.
         s = n1 + n2;
-        alert('A soma dos dois número é igual a: ' + s)
+        // Para usar o template string (${}), precisamos usar a cráse (``)
+        alert(`A soma entre o número ${n1} e o número ${n2} é: ${s}`)
+        // alert('A soma dos dois número é igual a: ' + s)
         /*
         Para transformar de número para uma string, posso utilizar duas maneiras:
         string(n)
