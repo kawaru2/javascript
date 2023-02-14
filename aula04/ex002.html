@@ -22,9 +22,8 @@
     <script>
         // pode ser usado o window antes mas não é obrigado. O ; também não é obrigatório no JS.
         // exemplo: window.prompt('Qual é seu nome?');
-        alert("Minha primeira mensagem."); // Mostra um alerta
-        confirm("Você está gostando de JS?"); // Mostra uma pergunta onde pode receber um 'ok' como sim ou 'cancel' como não.
-        prompt("Qual é seu nome?"); // Mostra uma pergunta e abre um campo para o usuario responder.
+        let name = prompt("Qual é seu nome?");
+        alert('Prazer em conhecer você, ' + name + '!'); // O name é uma variável, sendo assim, mostrará o que o usuário digitou na pergunta.
     </script>
 </body>
 </html>
