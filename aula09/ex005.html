@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passo com DOM</title>
+    <style>
+        body {
+            background-color: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        /* window = janela. document = documento atual ou arquivo atual.getElementsBy = pegar elemento
+        pela classe (pode ser pelo id, por tag do html...) [0] = qual elemento pegar? o 0 é o primeiro.
+        */
+        var p1 = window.document.getElementsByTagName('p')[1];
+        /* var corpo = window.document.body
+        corpo.style.background = 'black'; */
+        p1.style.color = 'blue';
+
+        /* O innerHTML serve para pegar o elemento de acordo como foi configurado no documento.
+        Já o innerText serve para utilizar somente o elemento sem outras marcas do HTML.
+        Para usar como exemplo, troque o innerHTML abaixo por innerText e observe a palavra DOM que está em negrito. */
+        window.document.write(p1.innerHTML);
+        // Também é possível mudar o write por alert para trocar o lugar onde aparecerá o texto, nesse caso, será um alerta já visto antes.
+        var d = window.document.getElementById('msg');
+         //d.style.background = 'green';
+         window.document.getElementById('msg').style.background = 'green';
+        //d.innerHTML = 'Estou aguardando...';
+        window.document.getElementById('msg').innerHTML = 'Estou aguardando';
+    </script>
+</body>
+</html>
