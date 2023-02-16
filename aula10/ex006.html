@@ -19,14 +19,31 @@
     </style>
 </head>
 <body>
-    <div id="area">
+    <div id="area" onmouseenter="entrou()" onclick="clicou()" onmouseout="saiu()">
         Interaja...
     </div>
     <script>
         var a = window.document.getElementById('area');
+        /*
+        Outra forma de utilizar os eventos, sem usar o html.
+        a.addEventListener('click', clicou); sem o parenteses da function
+        a.addEventListener('mouseEnter', entrou);
+        a.addEventListener('mouseout', saiu);
+        */
         function entrou() {
-            
+            a.innerText = 'Entrou';
         }
+
+        function clicou() {
+            a.innerText = 'Clicou';
+            a.style.background = 'red';
+        }
+
+        function saiu() {
+            a.innerText = 'Saiu';
+            a.style.background = 'lightgreen';
+        }
+
     </script>
 </body>
 </html>

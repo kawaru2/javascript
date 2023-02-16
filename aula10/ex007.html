@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo DOM</title>
+    <style>
+        body {
+            font-size: 1.2em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+        }
+
+        input {
+            width: 140px;
+            font-size: .8em;
+            margin: 10px 0px;
+        }
+
+        div {
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Somando Números</h1>
+    <input type="number" name="txtn1" id="txtn1" placeholder="Digite um número"> + 
+    <input type="number" name="txtn2" id="txtn2" placeholder="Digite um número">
+    <input type="submit" value="Somar" onclick="soma()">
+    <div id="res">Resultado</div>
+    <script>
+        function soma() {
+            var tn1 = window.document.getElementById('txtn1');
+            var tn2 = window.document.getElementById('txtn2');
+            var res = window.document.getElementById('res');
+            // Os dados vindo de uma caixa de texto serão uma string, faça a conversão.
+            var n1 = Number(tn1.value);
+            var n2 = Number(tn2.value);
+            var s = n1 + n2;
+            res.innerHTML = `A soma de ${n1} + ${n2} é <strong>${s}</strong>`;
+        }
+    </script>
+</body>
+</html>
