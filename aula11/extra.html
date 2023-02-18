@@ -8,16 +8,20 @@
 </head>
 <body>
     <h1>Sistema de Nacionalidade</h1>
-    Você nasceu em que país? <input type="text" name="n" id="n">
+    Você nasceu em que país? <input type="text" name="n" id="n" autocomplete="off">
     <input type="button" value="Confirmar" onclick="dados()">
     <div id="res"></div>
     <script>
         function dados() {
-            var n = window.document.getElementById('n');
-            var res = window.document.getElementById('res');
-            res.innerHTML = `Eu sou de ${n}.`;
-            if (n == 'brasil') {
-                res.innerHTML = `Você é brasileiro, seja bem vindo novamente a sua terra natal!`;
+            var n1 = window.document.getElementById('res');
+            var n2 = window.document.getElementById('n');
+            var res = n2.value.toLowerCase();
+            n1.innerHTML = `<p>Olá, você nasceu em <strong>${res}</strong></p>.`;
+            if (res == 'brasil') {
+                n1.innerHTML += `<p>Você é brasileiro. Bem vindo novamente ao Brasil!</p>`;
+            }
+            else {
+                n1.innerHTML += `<p>Você é estrangeiro, seja bem vindo ao Brasil!</p>`;
             }
         }
     </script>
