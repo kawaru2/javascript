@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício-aula11</title>
+</head>
+<body>
+    <h1>Sistema de população brasileria</h1>
+    <p>Em que país você nasceu?</p> <input type="text" name="pais" id="pais">
+    <input type="button" value="Confirmar" onclick="nacionalidade()">
+    <div id="res"></div>
+    <script>
+        function nacionalidade() {
+            var pais = window.document.getElementById(`pais`.toLowerCase());
+            var res = window.document.getElementById(`res`);
+            res.innerHTML = `<p>Você nasceu em <strong>${pais}</strong></p>.`;
+            if (pais == `brasil`) {
+                res.innerHTML += `<p>Você é <strong>brasileiro!</strong></p>`;
+            }
+            else {
+                res.innerHTML += `<p>Você é estrangeiro, bem vindo ao Brasil!</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
