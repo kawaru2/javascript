@@ -9,6 +9,7 @@ function calc() {
         for ( var c = 1; c <= 10; c += 1) {
         var item = document.createElement(`option`);
         item.text = `${n} x ${c} = ${n*c}`;
+        res.value = `res${c}`;
         res.appendChild(item);
         }
     }
