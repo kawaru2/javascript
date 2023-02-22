@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    <main>
+        <section>
+            <div>
+                <div class="ideia">
+                    <label for="n1">Início: </label>
+                    <input type="number" name="n1" id="n1">
+                </div>
+                <div class="ideia">
+                    <label for="n2">Fim: </label>
+                    <input type="number" name="n2" id="n2">
+                </div>
+                <div class="ideia">
+                    <label for="p">Passo: </label>
+                    <input type="number" name="p" id="p">
+                </div >
+                <input type="button" value="Contar" id="contar" onclick="calc()">
+            </div>
+            <div id="res">
+                <p>Preparando a contagem...</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Feito por <a href="#">João Barros</a> para a plataforma <a href="#">@cursoemvideo</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
