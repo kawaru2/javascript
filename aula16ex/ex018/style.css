@@ -1,0 +1,44 @@
+body {
+    background-color: skyblue;
+    font: normal 1.2em arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto;
+    width: 450px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+
+#enviar {
+    margin-left: 5px;
+    padding: 5px;
+}
+
+#finalizar {
+    display: block;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+#tab {
+    width: 200px;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+footer a {
+    color: white;
+}
